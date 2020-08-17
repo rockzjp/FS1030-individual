@@ -1,0 +1,47 @@
+body{
+  background-color: #4a4a4b;
+}
+.App{
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(27, 32, 34);
+  color: white;
+  cursor: pointer;
+  
+}
+
+.nav-links{
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+ 
+}
+
+
+li:hover{
+    background: gray;
+}
+
+footer{
+  color: white;
+  background: rgb(27, 32, 34);
+  min-height: 8vh;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.footer-text{
+ padding: 6px;
+ }

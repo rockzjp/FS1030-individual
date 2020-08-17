@@ -1,0 +1,39 @@
+{
+  "name": "course-project",
+  "version": "1.0.0",
+  "description": "For this project you must work alone to build a backend application consisting of a RESTful JSON API for a contact us form [_(examples)_](https://www.jotform.com/form-templates/category/contact-form) you'll be building out in a later class. All persistent data is to be stored in a simple JSON file that’s operated on through Node’s `fs` module.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -r esm index.js",
+    "test": "mocha -r esm --exit"
+  },
+  "dependencies": {
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "isemail": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.4",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "should": "^13.2.3",
+    "should-http": "^0.1.1",
+    "supertest": "^4.0.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/york-u-fs1020-winter-2020/course-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/york-u-fs1020-winter-2020/course-project/issues"
+  },
+  "homepage": "https://gitlab.com/york-u-fs1020-winter-2020/course-project#readme"
+}

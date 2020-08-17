@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    color: tan;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 100px auto;
+    
+}
+
+
+label{
+    margin-top: 20px;
+    
+}
+
+
+input, select{
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+.error{
+    color: red;
+    font-size: 1rem;
+}
+
+button{
+    background: #1997BF;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
