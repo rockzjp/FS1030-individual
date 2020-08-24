@@ -8,6 +8,7 @@ import userInsert from './src/userInsert.js'
 import userSearch from './src/userSearch.js'
 import userUpdate from './src/userUpdate.js'
 import contactLogInsert from './src/contactInsert.js'
+import portfolio from './src/portfolio.js'
 
 const mysql = require("mysql");
 const app = express();
@@ -63,6 +64,7 @@ app.use('/', userInsert);
 app.use('/', userSearch);
 app.use('/', userUpdate);
 app.use('/', contactLogInsert);
+app.use('/', portfolio);
 
 app.use((req, res, next) => {
     res.status(404).send({
