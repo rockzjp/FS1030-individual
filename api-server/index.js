@@ -2,9 +2,32 @@ import express from 'express'
 import routes from './src/routes.js'
 import jwt from 'jsonwebtoken'
 import cors from 'cors'
+import userLogin from './src/userLogin.js'
+import userDelete from './src/userDelete.js'
+import userInsert from './src/userInsert.js'
+import userSearch from './src/userSearch.js'
+import userUpdate from './src/userUpdate.js'
 
+const mysql = require("mysql");
 const app = express();
 const port = 3001;
+
+// connection to database
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "test",
+  });
+  
+  // connect to database
+db.connect((err) => {
+if (err) {
+    throw err;
+}
+console.log("Connected to database");
+});
+global.db = db;
 
 //解决跨域问题
 app.use(cors()); 
@@ -33,6 +56,11 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.static("public"));
 app.use('/', routes);
+app.use('/', userLogin);
+app.use('/', userDelete);
+app.use('/', userInsert);
+app.use('/', userSearch);
+app.use('/', userUpdate);
 app.use((req, res, next) => {
     res.status(404).send({
         message: 'not found'

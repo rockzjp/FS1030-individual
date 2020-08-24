@@ -9,9 +9,10 @@ import UsersManage from './UsersManage.js'
 const router = express.Router();
 
 router.post('/auth', (req, res) => {
+    // { email: 'as', password: '123' }
     let data = req.body
     let errors = []
- 
+
     if (data.email == undefined || data.email == '' || data.email == null || !Isemail.validate(data.email) || !UsersManage.emailIsExists(data.email)) {
         errors.push('email')
     }
