@@ -7,6 +7,7 @@ import userDelete from './src/userDelete.js'
 import userInsert from './src/userInsert.js'
 import userSearch from './src/userSearch.js'
 import userUpdate from './src/userUpdate.js'
+import contactLogInsert from './src/contactInsert.js'
 
 const mysql = require("mysql");
 const app = express();
@@ -61,6 +62,8 @@ app.use('/', userDelete);
 app.use('/', userInsert);
 app.use('/', userSearch);
 app.use('/', userUpdate);
+app.use('/', contactLogInsert);
+
 app.use((req, res, next) => {
     res.status(404).send({
         message: 'not found'
