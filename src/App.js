@@ -7,6 +7,7 @@ import About from './components/About/About';
 import Blog from './components/Blog/Blog'; 
 import Login from './components/Login/Login'
 import Admin from './components/Admin/Admin';
+import Register from './components/Admin/register';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/contact" component={Contact} />
               <Route path="/login" component={Login} />
               <Route path="/admin" component={Admin} />
+              <Route path="/account/register" component={Register} />
               
 
           </Switch>

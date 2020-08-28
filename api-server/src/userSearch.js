@@ -5,7 +5,7 @@ import jsonwebtoken from "jsonwebtoken";
 const router = express.Router();
 dotenv.config();
 
-router.get("/user/search", (req, res) => {
+router.post("/user/search", (req, res) => {
   try {
     var reqinfo = req.body;
     if(reqinfo.token == null) {

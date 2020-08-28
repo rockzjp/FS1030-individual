@@ -5,7 +5,7 @@ import jsonwebtoken from "jsonwebtoken";
 const router = express.Router();
 dotenv.config();
 
-router.get("/login", (req, res) => {
+router.post("/login", (req, res) => {
   try {
     var reqinfo = req.body;
     var sql = "SELECT * FROM users where email=?";
@@ -18,11 +18,13 @@ router.get("/login", (req, res) => {
       if (result) {
         // verify password
         result = result[0]
+        console.log(result)
+        if(result == undefined) return "{}"
         if(result.password == reqinfo.password) {
           const resp = 
             {
-              returnCode: 0,
-              returnMsg: 'success',
+              status: 0,
+              message: 'success',
               name: result.name,
               email: result.email,
               isAdmin: result.isAdmin,

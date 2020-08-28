@@ -33,14 +33,18 @@ function Login() {
        if(!isValid){
          return
        }
-      
-      $.ajax({
-        type: "post",
-        url: "http://localhost:3001/auth" ,
+
+       var sdata = JSON.stringify(data)
+        $.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:3001/login",
         dataType : "json",
         contentType : "application/json", 
-        data: JSON.stringify(data),
+        processData : false,
+        //headers: {'Content-Type':'application/json'},
+        data: sdata,
         success: function (res) {
+          alert(JSON.stringify(res))
           if(res.status === 0)
           {
               

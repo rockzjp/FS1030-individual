@@ -1,1 +1,12 @@
 node_modules
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/phase/config/applicationhost.config
+.vs/phase/v16/.suo
+src/.idea/.gitignore
+src/.idea/misc.xml
+src/.idea/modules.xml
+src/.idea/src.iml
+src/.idea/vcs.xml
+src/.idea/inspectionProfiles/profiles_settings.xml
